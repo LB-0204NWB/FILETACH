@@ -7,15 +7,15 @@ class CustomSwitch(QPushButton):
     def __init__(self, label_on, label_off, topic, mqtt_client, image_label, image_path_on, image_path_off, parent=None):
         super().__init__(parent)
         self.setCheckable(True)
-        self.setMinimumSize(60, 40)
+        self.setMinimumSize(50, 30)
         self.setStyleSheet("""
             QPushButton {
                 border: 2px solid #555;
                 border-radius: 5px;
                 background-color: #ff0000;
                 color: white;   
-                font-size: 14px;
-                padding: 5px;
+                font-size: 12px;
+                padding: 3px;
             }
             QPushButton:checked {
                 background-color: #00ff00;
@@ -40,16 +40,16 @@ class CustomSwitch(QPushButton):
 
     def update_image(self):
         pixmap = QPixmap(self.image_path_on if self.isChecked() else self.image_path_off)
-        self.image_label.setPixmap(pixmap.scaled(200, 200, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        self.image_label.setPixmap(pixmap.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation))
         self.image_label.setAlignment(Qt.AlignCenter)
         self.apply_image_stylesheet()
 
     def apply_image_stylesheet(self):
         stylesheet = """
             QLabel {
-                border: 2px solid #555;
-                border-radius: 20px;
-                padding: 10px;
+                border: 1px solid #555;
+                border-radius: 10px;
+                padding: 5px;
                 background-color: #f0f0f0;
             }
         """
@@ -77,15 +77,14 @@ class FirstPage(QWidget):
         center_layout = QVBoxLayout()
         bottom_layout = QHBoxLayout()
 
-        # Time and date labels with borders
         self.time_label = QLabel(self)
         self.date_label = QLabel(self)
         for label in (self.time_label, self.date_label):
             label.setStyleSheet("""
-                font-size: 14px;
+                font-size: 12px;
                 border: 1px solid #007bff;
-                border-radius: 10px;
-                padding: 5px;
+                border-radius: 5px;
+                padding: 3px;
                 background-color: #e6f2ff;
             """)
             label.setAlignment(Qt.AlignCenter)
@@ -94,19 +93,17 @@ class FirstPage(QWidget):
         top_layout.addStretch(1)
         top_layout.addWidget(self.date_label)
 
-        # Placeholder for main image
         self.image_label = QLabel(self)
         main_image_path = "C:/Users/longb/Desktop/DOANTOINGHIEP/PJPY/FILE_tach/img/logo/LOGO.jpg"
         main_pixmap = QPixmap(main_image_path)
-        self.image_label.setPixmap(main_pixmap.scaled(200, 200, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        self.image_label.setPixmap(main_pixmap.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation))
         self.image_label.setAlignment(Qt.AlignCenter)
         center_layout.addWidget(self.image_label, alignment=Qt.AlignCenter)
         self.apply_main_image_stylesheet()
 
-        # Add the UTH label
         uth_label = QLabel("UTH", self)
         uth_label.setStyleSheet("""
-            font-size: 25px;
+            font-size: 20px;
             color: white;
         """)
         uth_label.setAlignment(Qt.AlignCenter)
@@ -114,11 +111,9 @@ class FirstPage(QWidget):
         
         center_layout.addStretch(1)
 
-        # Image paths for ON and OFF states
         image_path_on = "C:/Users/longb/Desktop/DOANTOINGHIEP/PJPY/FILE_tach/img/DEVICE_ON.jpg"
         image_path_off = "C:/Users/longb/Desktop/DOANTOINGHIEP/PJPY/FILE_tach/img/DEVICE_OFF.jpg"
 
-        # Create and position buttons
         self.switches = []
         for i in range(1, 6):
             switch_layout = QVBoxLayout()
@@ -127,7 +122,7 @@ class FirstPage(QWidget):
             switch_image_label = QLabel(self)
             switch_image_label.setAlignment(Qt.AlignCenter)
             switch = CustomSwitch(f"Device {i} ON", f"Device {i} OFF", f"LED{i}", self.mqtt_client, switch_image_label, image_path_on, image_path_off)
-            switch.setMinimumSize(80, 40)
+            switch.setMinimumSize(60, 30)
             self.switches.append(switch)
 
             switch_layout.addWidget(switch_image_label)
@@ -141,9 +136,9 @@ class FirstPage(QWidget):
             QPushButton {
                 background-color: #008CBA;
                 color: white;
-                font-size: 16px;
-                border-radius: 10px;            
-                padding: 8px;
+                font-size: 14px;
+                border-radius: 5px;            
+                padding: 5px;
             }
             QPushButton:hover {
                 background-color: #0033bb;
@@ -167,8 +162,8 @@ class FirstPage(QWidget):
         stylesheet = """
             QLabel {
                 border: 2px;
-                border-radius: 20px;
-                padding: 5px;
+                border-radius: 10px;
+                padding: 3px;
                 background-color: #e6f2ff;
             }
         """
@@ -217,9 +212,8 @@ class MainWindow(QWidget):
         self.setLayout(layout)
 
         self.setWindowTitle('Two Page Navigation')
-        self.setGeometry(300, 300, 1280, 720)
+        self.setGeometry(0, 0, 800, 480)
 
-        # Set background color
         self.setStyleSheet("background-color: #635959;")
 
         self.show()

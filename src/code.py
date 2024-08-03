@@ -5,6 +5,13 @@ import pickle
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QImage, QPixmap, QTransform
 from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QMessageBox
+import os
+import sys
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
 
 class SecondPage(QWidget):
     def __init__(self, stacked_widget, mqtt_client):
@@ -23,7 +30,7 @@ class SecondPage(QWidget):
         self.hands = self.mp_hands.Hands(static_image_mode=False,
                                          max_num_hands=1, min_detection_confidence=0.7)
         
-        with open('../src/FILEUP2.pkl', 'rb') as f:
+        with open(resource_path('src/FILEUP2.pkl'), 'rb') as f:
             self.svm = pickle.load(f)
 
         self.mqtt_client.messageSignal.connect(self.handle_mqtt_message)
@@ -31,10 +38,11 @@ class SecondPage(QWidget):
     def initUI(self):
         self.setGeometry(0, 0, 800, 480)
 
+        # Device statuses
         self.device_status_labels = []
         for i in range(1, 6):
             label = QLabel(f"Device {i}: OFF", self)
-            label.setGeometry(10, 30 + (i-1)*70, 120, 30)
+            label.setGeometry(10, 30 + (i-1)*70, 120, 40)
             label.setAlignment(Qt.AlignCenter)
             label.setStyleSheet("""
                 QLabel {
@@ -46,20 +54,21 @@ class SecondPage(QWidget):
                 }
             """)
             self.device_status_labels.append(label)
-        
+        # Image paths
         image_paths = [
-            "../img/hand/OFF_1.jpg",
-            "../img/hand/ON_1.jpg",
-            "../img/hand/OFF_2.jpg",
-            "../img/hand/ON_2.jpg",
-            "../img/hand/OFF_3.jpg",
-            "../img/hand/ON_3.jpg",
-            "../img/hand/OFF_4.jpg",
-            "../img/hand/ON_4.jpg",
-            "../img/hand/OFF_5.jpg",
-            "../img/hand/ON_5.jpg",
+            resource_path("img/hand/OFF_1.jpg"),
+            resource_path("img/hand/ON_1.jpg"),
+            resource_path("img/hand/OFF_2.jpg"),
+            resource_path("img/hand/ON_2.jpg"),
+            resource_path("img/hand/OFF_3.jpg"),
+            resource_path("img/hand/ON_3.jpg"),
+            resource_path("img/hand/OFF_4.jpg"),
+            resource_path("img/hand/ON_4.jpg"),
+            resource_path("img/hand/OFF_5.jpg"),
+            resource_path("img/hand/ON_5.jpg"),
         ]
 
+        # Angle to rotate the image (in degrees)
         angle = 0
 
         for i, path in enumerate(image_paths):
@@ -68,8 +77,10 @@ class SecondPage(QWidget):
             
             pixmap = QPixmap(path)
             
+            # Create a QTransform object and rotate it by the specified angle
             transform = QTransform().rotate(angle)
             
+            # Apply the transformation to the QPixmap
             rotated_pixmap = pixmap.transformed(transform, Qt.SmoothTransformation)
             
             label.setPixmap(rotated_pixmap.scaled(label.size(), Qt.IgnoreAspectRatio, Qt.SmoothTransformation))
@@ -77,22 +88,24 @@ class SecondPage(QWidget):
                 QLabel {
                     background-color: #f0f0f0;
                     border-radius: 5px;
-                    padding: 3px;
+                    padding: 5px;
                 }
             """)
 
+        # Camera label
         self.camera_label = QLabel("CAMERA KHUNG", self)
         self.camera_label.setGeometry(320, 30, 400, 300)
-        self.camera_label.setStyleSheet("background-color: #4682b4;border-radius: 10px; color: white; font-size: 18px;")
+        self.camera_label.setStyleSheet("background-color: #4682b4;border-radius: 10px; color: white; font-size: 16px;")
         self.camera_label.setAlignment(Qt.AlignCenter)
 
+        # Buttons
         start_button = QPushButton('BẬT CAM', self)
-        start_button.setGeometry(350, 350, 100, 40)
+        start_button.setGeometry(350, 340, 100, 30)
         start_button.setStyleSheet("""
             QPushButton {
                 background-color: #4CAF50;
                 color: white;
-                font-size: 14px;
+                font-size: 12px;
                 border-radius: 5px;
             }
             QPushButton:hover {
@@ -102,12 +115,12 @@ class SecondPage(QWidget):
         start_button.clicked.connect(self.startCamera)
 
         stop_button = QPushButton('TẮT CAM', self)
-        stop_button.setGeometry(470, 350, 100, 40)
+        stop_button.setGeometry(470, 340, 100, 30)
         stop_button.setStyleSheet("""
             QPushButton {
                 background-color: #f44336;
                 color: white;
-                font-size: 14px;
+                font-size: 12px;
                 border-radius: 5px;
             }
             QPushButton:hover {
@@ -117,12 +130,12 @@ class SecondPage(QWidget):
         stop_button.clicked.connect(self.stopCamera)
 
         back_button = QPushButton('BACK PAGE', self)
-        back_button.setGeometry(590, 350, 100, 40)
+        back_button.setGeometry(590, 340, 100, 30)
         back_button.setStyleSheet("""
             QPushButton {
                 background-color: #008CBA;
                 color: white;
-                font-size: 14px;
+                font-size: 12px;
                 border-radius: 5px;
             }
             QPushButton:hover {
@@ -199,10 +212,10 @@ class SecondPage(QWidget):
                 text = "UNKNOWN"
 
             font = cv2.FONT_HERSHEY_SIMPLEX
-            org = (20, 50)
+            org = (50, 100)
             fontScale = 2
             color = (255, 0, 0)
-            thickness = 2
+            thickness = 3
             frame = cv2.putText(frame, text, org, font, fontScale, color, thickness, cv2.LINE_AA)
 
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -212,6 +225,7 @@ class SecondPage(QWidget):
             print("Không thể chụp khung hình")
 
     def handle_mqtt_message(self, topic, message):
+        # if topic.startswith("LED") and topic.endswith("/status"):
         if message == "ON" or message == "OFF":
             device_number = int(topic[3])
             if 1 <= device_number <= 5:
@@ -228,7 +242,7 @@ class SecondPage(QWidget):
                         }
                     """)
                 else:
-                    label.setText(f"Thiết bị {device_number}: OFF")
+                    label.setText(f"Device {device_number}: OFF")
                     label.setStyleSheet("""
                         QLabel {
                             background-color: #ff0000;
