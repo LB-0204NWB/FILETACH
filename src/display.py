@@ -2,13 +2,6 @@ from PyQt5.QtCore import Qt, QTimer, QDateTime
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QWidget, QStackedWidget, QPushButton, QVBoxLayout, QLabel, QHBoxLayout
 from handscustom import SecondPage
-import os
-import sys
-
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(base_path, relative_path)
 
 class CustomSwitch(QPushButton):
     def __init__(self, label_on, label_off, topic, mqtt_client, image_label, image_path_on, image_path_off, parent=None):
@@ -34,8 +27,8 @@ class CustomSwitch(QPushButton):
         self.topic = topic
         self.mqtt_client = mqtt_client
         self.image_label = image_label
-        self.image_path_on = resource_path(image_path_on)
-        self.image_path_off = resource_path(image_path_off)
+        self.image_path_on = image_path_on
+        self.image_path_off = image_path_off
         self.update_label()
         self.update_image()
         self.toggled.connect(self.update_label)
@@ -103,7 +96,7 @@ class FirstPage(QWidget):
 
         # Placeholder for main image
         self.image_label = QLabel(self)
-        main_image_path = resource_path("img/logo/LOGO.jpg")
+        main_image_path = "C:/Users/longb/Desktop/DOANTOINGHIEP/PJPY/FILE_tach/img/logo/LOGO.jpg"
         main_pixmap = QPixmap(main_image_path)
         self.image_label.setPixmap(main_pixmap.scaled(200, 200, Qt.KeepAspectRatio, Qt.SmoothTransformation))
         self.image_label.setAlignment(Qt.AlignCenter)
@@ -122,8 +115,8 @@ class FirstPage(QWidget):
         center_layout.addStretch(1)
 
         # Image paths for ON and OFF states
-        image_path_on = "img/DEVICE_ON.jpg"
-        image_path_off = "img/DEVICE_OFF.jpg"
+        image_path_on = "C:/Users/longb/Desktop/DOANTOINGHIEP/PJPY/FILE_tach/img/DEVICE_ON.jpg"
+        image_path_off = "C:/Users/longb/Desktop/DOANTOINGHIEP/PJPY/FILE_tach/img/DEVICE_OFF.jpg"
 
         # Create and position buttons
         self.switches = []
@@ -236,6 +229,6 @@ if __name__ == "__main__":
     from mqtt_client import MQTTClient  # Assuming you have this module
 
     app = QApplication(sys.argv)
-    mqtt_client = MQTTClient("192.168.1.179", 1883)  # Initialize your MQTT client
+    mqtt_client = MQTTClient()  # Initialize your MQTT client
     window = MainWindow(mqtt_client)
     sys.exit(app.exec_())
