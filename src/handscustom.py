@@ -5,13 +5,6 @@ import pickle
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QImage, QPixmap, QTransform
 from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QMessageBox
-import os
-import sys
-
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
-    return os.path.join(base_path, relative_path)
 
 class SecondPage(QWidget):
     def __init__(self, stacked_widget, mqtt_client):
@@ -30,7 +23,7 @@ class SecondPage(QWidget):
         self.hands = self.mp_hands.Hands(static_image_mode=False,
                                          max_num_hands=1, min_detection_confidence=0.7)
         
-        with open(resource_path('src/FILEUP2.pkl'), 'rb') as f:
+        with open('../src/FILEUP2.pkl', 'rb') as f:
             self.svm = pickle.load(f)
 
         self.mqtt_client.messageSignal.connect(self.handle_mqtt_message)
@@ -56,16 +49,16 @@ class SecondPage(QWidget):
             self.device_status_labels.append(label)
         # Image paths
         image_paths = [
-            resource_path("img/hand/OFF_1.jpg"),
-            resource_path("img/hand/ON_1.jpg"),
-            resource_path("img/hand/OFF_2.jpg"),
-            resource_path("img/hand/ON_2.jpg"),
-            resource_path("img/hand/OFF_3.jpg"),
-            resource_path("img/hand/ON_3.jpg"),
-            resource_path("img/hand/OFF_4.jpg"),
-            resource_path("img/hand/ON_4.jpg"),
-            resource_path("img/hand/OFF_5.jpg"),
-            resource_path("img/hand/ON_5.jpg"),
+            "../img/hand/OFF_1.jpg",
+            "../img/hand/ON_1.jpg",
+            "../img/hand/OFF_2.jpg",
+            "../img/hand/ON_2.jpg",
+            "../img/hand/OFF_3.jpg",
+            "../img/hand/ON_3.jpg",
+            "../img/hand/OFF_4.jpg",
+            "../img/hand/ON_4.jpg",
+            "../img/hand/OFF_5.jpg",
+            "../img/hand/ON_5.jpg",
         ]
 
         # Angle to rotate the image (in degrees)
@@ -242,7 +235,7 @@ class SecondPage(QWidget):
                         }
                     """)
                 else:
-                    label.setText(f"Device {device_number}: OFF")
+                    label.setText(f"Thiết bị {device_number}: OFF")
                     label.setStyleSheet("""
                         QLabel {
                             background-color: #ff0000;
