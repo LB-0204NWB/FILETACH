@@ -1,13 +1,13 @@
-MQTT-Based Device Control Application
-Overview
+# MQTT-Based Device Control Application
+### Overview
 This project is a Python-based application that utilizes MQTT to control and monitor multiple devices. It features a graphical user interface (GUI) built using PyQt5 and a hand gesture recognition system using MediaPipe and OpenCV.
 
-Features
+### Features
 Control up to 5 devices via MQTT.
 Real-time status updates of devices.
 Hand gesture recognition for device control.
 Two-page navigation interface.
-Requirements
+### Requirements
 Python 3.x
 PyQt5
 paho-mqtt
@@ -15,65 +15,62 @@ opencv-python
 mediapipe
 numpy
 pickle
-Installation
+### Installation
 Clone the repository:
-
-
-'''sh
-Copy code
+```sh
 git clone https://github.com/yourusername/mqtt-device-control.git
 cd mqtt-device-control
 Install the required packages:
-'''
+```
 
-sh
-Copy code
+```sh
 pip install PyQt5 paho-mqtt opencv-python mediapipe numpy
-Setup
-Ensure that your MQTT broker is running and accessible.
-Update the MQTT broker address and port in main.py:
-python
-Copy code
+```
+### Setup
+1. Ensure that your MQTT broker is running and accessible.
+2. Update the MQTT broker address and port in main.py:
+```python
 mqtt_client = MQTTClient("your_broker_address", your_port)
-Place the FILEUP2.pkl file in the src directory.
-Usage
-Run the application:
+```
+3. Place the FILEUP2.pkl file in the src directory.
+### Usage
+1. Run the application:
 
-sh
-Copy code
+```sh
 python main.py
-The main window will appear with the control panel for the devices.
+```
+2. The main window will appear with the control panel for the devices.
 
-Use the buttons to switch devices on and off. The status will be updated in real-time.
+3. Use the buttons to switch devices on and off. The status will be updated in real-time.
 
-Navigate to the second page to use hand gestures for controlling the devices.
+4. Navigate to the second page to use hand gestures for controlling the devices.
 
-Code Structure
-main.py: The entry point of the application. It initializes the MQTT client and the main window.
-mqtt_client.py: Defines the MQTTClient class for handling MQTT connections and messages.
-display.py: Contains the GUI definitions including the main window, device controls, and navigation.
-handscustom.py: Implements the hand gesture recognition and camera handling.
-Classes and Functions
-main.py
-Functions:
-resource_path(relative_path): Returns the absolute path to the resource.
-Main Block:
-Initializes the MQTTClient and MainWindow.
-mqtt_client.py
-Class MQTTClient(QObject)
-Manages MQTT connections and message handling.
-display.py
-Class CustomSwitch(QPushButton)
-Custom switch button for device control.
-Class FirstPage(QWidget)
-The first page of the application with device controls.
-Class MainWindow(QWidget)
-The main application window.
-handscustom.py
+### Code Structure
+* main.py: The entry point of the application. It initializes the MQTT client and the main window.
+* mqtt_client.py: Defines the MQTTClient class for handling MQTT connections and messages.
+* display.py: Contains the GUI definitions including the main window, device controls, and navigation.
+* handscustom.py: Implements the hand gesture recognition and camera handling.
+## Classes and Functions
+### main.py
+ * Functions:
+  *resource_path(relative_path): Returns the absolute path to the resource.
+### Main Block:
+* Initializes the MQTTClient and MainWindow.
+### mqtt_client.py
+* Class MQTTClient(QObject)
+* Manages MQTT connections and message handling.
+### display.py
+* Class CustomSwitch(QPushButton)
+* Custom switch button for device control.
+* Class FirstPage(QWidget)
+* The first page of the application with device controls.
+* Class MainWindow(QWidget)
+* The main application window.
+### handscustom.py
 Class SecondPage(QWidget)
 The second page with hand gesture recognition for device control.
-License
+# License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Contact
-For any questions or suggestions, please contact yourname@yourdomain.com.
+# Contact
+For any questions or suggestions, please contact Longbach0204@gmail.com
