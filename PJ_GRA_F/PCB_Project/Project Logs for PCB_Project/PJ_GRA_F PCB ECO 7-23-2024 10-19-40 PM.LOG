@@ -1,0 +1,12 @@
+Added Component: Designator=L1(ST7735 (OLED -1.8 inch))
+Added Pin To Net: NetName=GND Pin=L1-1
+Added Pin To Net: NetName=5V Pin=L1-2
+Added Pin To Net: NetName=IO18 Pin=L1-3
+Added Pin To Net: NetName=IO23 Pin=L1-4
+Added Pin To Net: NetName=IO17 Pin=L1-5
+Added Pin To Net: NetName=IO16 Pin=L1-6
+Added Pin To Net: NetName=IO5 Pin=L1-7
+Added Pin To Net: NetName=3V3 Pin=L1-8
+Change Net Color : Old Net Color=Blue New Net Color=Default
+Added Member To Class: ClassName=PJ_GRA_F Member=Component L1 LCD ST7735
+Added Room: Name=PJ_GRA_F

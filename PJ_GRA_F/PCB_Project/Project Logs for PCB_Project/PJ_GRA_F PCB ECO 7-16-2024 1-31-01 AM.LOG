@@ -1,0 +1,26 @@
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 22uF 10V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 22uF 10V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C? 22uF 10V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D? DIODE
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D? RED LED
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D? BAT760-7
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D? DIODE
+Added Member To Class: ClassName=PJ_GRA_F Member=Component Q? S8050
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 10K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 22.1K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 10K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 47.5K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 0R(5%)
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 0R(5%)
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R? 10K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component SW? Tact Switch
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U? ESP32-WROOM-32D-N4
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U? AMS1117-3.3
+Added Room: Name=PJ_GRA_F

@@ -1,0 +1,10 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=J5
+Added Component: Designator=J1(M4)
+Added Component: Designator=J2(M4)
+Added Component: Designator=J3(M4)
+Added Component: Designator=J4(M4)
+Added Member To Class: ClassName=PJ_GRA_F Member=Component J2 PIN-M4
+Added Member To Class: ClassName=PJ_GRA_F Member=Component J3 PIN-M4
+Added Member To Class: ClassName=PJ_GRA_F Member=Component J4 PIN-M4
+Added Member To Class: ClassName=PJ_GRA_F Member=Component J5 MICRO B
+Added Room: Name=PJ_GRA_F

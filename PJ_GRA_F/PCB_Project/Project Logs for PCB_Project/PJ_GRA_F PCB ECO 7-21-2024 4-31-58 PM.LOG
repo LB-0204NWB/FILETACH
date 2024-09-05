@@ -1,0 +1,42 @@
+Change Net Color : Old Net Color=Blue New Net Color=Default
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C5 470nF 400v
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C7 470nF 400v
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C10 470nF 400v
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C11 470nF 400v
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D1 Diode
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D2 RED LED
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D3 Diode
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D4 RED LED
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D5 Diode
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D6 RED LED
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D8 Diode
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D9 RED LED
+Added Member To Class: ClassName=PJ_GRA_F Member=Component P1 CON 2 EDG5.08
+Added Member To Class: ClassName=PJ_GRA_F Member=Component P2 CON 2 EDG5.08
+Added Member To Class: ClassName=PJ_GRA_F Member=Component P3 CON 2 EDG5.08
+Added Member To Class: ClassName=PJ_GRA_F Member=Component P4 CON 2 EDG5.08
+Added Member To Class: ClassName=PJ_GRA_F Member=Component Q1 S8050
+Added Member To Class: ClassName=PJ_GRA_F Member=Component Q2 S8050
+Added Member To Class: ClassName=PJ_GRA_F Member=Component Q3 S8050
+Added Member To Class: ClassName=PJ_GRA_F Member=Component Q4 S8050
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R2 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R3 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R4 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R6 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R7 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R8 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R9 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R11 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R12 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R13 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R14 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R15 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component RL1 Relay
+Added Member To Class: ClassName=PJ_GRA_F Member=Component RL2 Relay
+Added Member To Class: ClassName=PJ_GRA_F Member=Component RL3 Relay
+Added Member To Class: ClassName=PJ_GRA_F Member=Component RL4 Relay
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U1 PC81713NIP0X
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U3 PC81713NIP0X
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U5 PC81713NIP0X
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U6 PC81713NIP0X
+Added Room: Name=PJ_GRA_F

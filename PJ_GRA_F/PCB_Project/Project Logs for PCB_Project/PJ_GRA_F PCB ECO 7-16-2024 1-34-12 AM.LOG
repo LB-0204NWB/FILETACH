@@ -1,0 +1,71 @@
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=C? NewDesignator=C2
+Change Component Designator: OldDesignator=C? NewDesignator=C3
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=C? NewDesignator=C5
+Change Component Designator: OldDesignator=C? NewDesignator=C6
+Change Component Designator: OldDesignator=C? NewDesignator=C7
+Change Component Designator: OldDesignator=C? NewDesignator=C8
+Change Component Designator: OldDesignator=C? NewDesignator=C9
+Change Component Designator: OldDesignator=D? NewDesignator=D1
+Change Component Designator: OldDesignator=D? NewDesignator=D2
+Change Component Designator: OldDesignator=D? NewDesignator=D3
+Change Component Designator: OldDesignator=D? NewDesignator=D4
+Change Component Designator: OldDesignator=D? NewDesignator=D5
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=Q? NewDesignator=Q1
+Change Component Designator: OldDesignator=Q? NewDesignator=Q2
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Change Component Designator: OldDesignator=R? NewDesignator=R7
+Change Component Designator: OldDesignator=R? NewDesignator=R8
+Change Component Designator: OldDesignator=R? NewDesignator=R9
+Change Component Designator: OldDesignator=R? NewDesignator=R10
+Change Component Designator: OldDesignator=SW? NewDesignator=SW1
+Change Component Designator: OldDesignator=SW? NewDesignator=SW2
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U2
+Change Component Designator: OldDesignator=U? NewDesignator=U3
+Change Net Name : Old Net Name=NetD?_2 New Net Name=NetD1_2
+Change Net Name : Old Net Name=NetQ?_1 New Net Name=NetQ1_1
+Change Net Name : Old Net Name=NetR?_2 New Net Name=NetR9_2
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-1
+Added Pin To Net: NetName=NetQ2_1 Pin=R10-2
+Added Net: Name=NetQ2_1
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=R7-2
+Added Pin To Net: NetName=NetR5_2 Pin=U3-8
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Pin To Net: NetName=NetR8_2 Pin=U3-9
+Added Net: Name=NetR8_2
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C1 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C2 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C3 22uF 10V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C5 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C6 22uF 10V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C7 22uF 10V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C8 4.7uf 6.3V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component C9 0.1uf 50V
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D1 RED LED
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D2 BAT760-7
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D4 DIODE
+Added Member To Class: ClassName=PJ_GRA_F Member=Component D5 DIODE
+Added Member To Class: ClassName=PJ_GRA_F Member=Component Q1 S8050
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R1 10K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R2 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R3 0R(5%)
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R4 0R(5%)
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R5 22.1K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R6 10K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R7 47.5K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R8 2K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component R10 10K
+Added Member To Class: ClassName=PJ_GRA_F Member=Component SW2 Tact Switch
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U2 AMS1117-3.3
+Added Member To Class: ClassName=PJ_GRA_F Member=Component U3 CP2102_QFN_28P
+Added Room: Name=PJ_GRA_F

@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=NO1 Pin=P1-1
+Removed Pin From Net: NetName=COM1 Pin=P1-2
+Removed Pin From Net: NetName=NO2 Pin=P2-1
+Removed Pin From Net: NetName=COM2 Pin=P2-2
+Removed Pin From Net: NetName=NO3 Pin=P3-1
+Removed Pin From Net: NetName=COM3 Pin=P3-2
+Removed Pin From Net: NetName=NO4 Pin=P4-1
+Removed Pin From Net: NetName=COM4 Pin=P4-2
+Added Pin To Net: NetName=COM1 Pin=P1-1
+Added Pin To Net: NetName=NO1 Pin=P1-2
+Added Pin To Net: NetName=COM2 Pin=P2-1
+Added Pin To Net: NetName=NO2 Pin=P2-2
+Added Pin To Net: NetName=COM3 Pin=P3-1
+Added Pin To Net: NetName=NO3 Pin=P3-2
+Added Pin To Net: NetName=COM4 Pin=P4-1
+Added Pin To Net: NetName=NO4 Pin=P4-2
+Change Net Color : Old Net Color=Blue New Net Color=Default
+Added Room: Name=PJ_GRA_F

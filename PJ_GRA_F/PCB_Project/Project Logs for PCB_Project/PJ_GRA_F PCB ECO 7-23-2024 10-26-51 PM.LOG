@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=NO4 Pin=C6-1
+Removed Pin From Net: NetName=COM4 Pin=C6-2
+Removed Pin From Net: NetName=COM4 Pin=P2-1
+Removed Pin From Net: NetName=NO4 Pin=P2-2
+Removed Pin From Net: NetName=COM4 Pin=RL2-1
+Removed Pin From Net: NetName=NO4 Pin=RL2-3
+Added Pin To Net: NetName=COM5 Pin=C6-2
+Added Pin To Net: NetName=COM5 Pin=P2-1
+Added Pin To Net: NetName=COM5 Pin=RL2-1
+Added Net: Name=COM5
+Added Pin To Net: NetName=NO5 Pin=C6-1
+Added Pin To Net: NetName=NO5 Pin=P2-2
+Added Pin To Net: NetName=NO5 Pin=RL2-3
+Added Net: Name=NO5
+Added Room: Name=PJ_GRA_F
